@@ -1,0 +1,183 @@
+
+
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px; /* Increased base font size */
+    overflow-y: auto; /* Allow scrolling if content still overflows */
+}
+
+/* Main Content Wrapper (for the form and messages) */
+.main-content {
+    background-color: white;
+    padding: 2rem; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Take 90% of the viewport width */
+    max-width: 500px; /* Increased max-width for better readability with larger text */
+    margin: 20px auto; /* Center the content block */
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 1.8rem; /* Increased heading size */
+    color: #3498db;
+    margin: 0 0 0.5rem 0; /* Adjusted margin */
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem; /* Increased heading size */
+    font-weight: normal;
+    margin: 0 0 1rem 0; /* Adjusted margin */
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 1.2rem; /* Increased heading size */
+    margin: 0 0 1rem 0; /* Adjusted margin */
+    padding-bottom: 1rem; /* Increased padding */
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Paragraph styles for operator details */
+.main-content p {
+    text-align: center; /* Center these paragraphs too */
+    margin-bottom: 0.8rem; /* Adjusted margin */
+    font-size: 1rem; /* Increased font size */
+}
+
+.main-content p strong {
+    color: #555;
+}
+
+
+/* Form Container Styling */
+form {
+    margin: 1rem 0; /* Increased margin */
+}
+
+form div {
+    margin-bottom: 0.8rem; /* Increased margin between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem; /* Increased margin below label */
+    font-weight: 500;
+    font-size: 0.95rem; /* Increased label font size */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select { /* Consistent input/select styling */
+    width: 100%;
+    padding: 0.7rem; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem; /* Increased font size for inputs */
+    box-sizing: border-box;
+    margin-bottom: 0.8rem; /* Increased margin */
+}
+
+select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* For Safari */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.3L159.2%2C69.5c-3.6-3.6-8.6-5.5-13.9-5.5s-10.3%2C1.9-13.9%2C5.5L5.5%2C197.3c-3.6%2C3.6-5.5%2C8.6-5.5%2C13.9s1.9%2C10.3%2C5.5%2C13.9l13.9%2C13.9c3.6%2C3.6%2C8.6%2C5.5%2C13.9%2C5.5s10.3-1.9%2C13.9-5.5L145.4%2C103.5l112.5%2C112.5c3.6%2C3.6%2C8.6%2C5.5%2C13.9%2C5.5s10.3-1.9%2C13.9-5.5l13.9-13.9C290.6%2C207.6%2C290.6%2C200.9%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px; /* Increased arrow size */
+    padding-right: 35px; /* Make space for the custom arrow */
+}
+
+
+button {
+    width: 100%;
+    padding: 0.8rem; /* Increased padding for buttons */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem; /* Increased font size for buttons */
+    cursor: pointer;
+    margin: 0.8rem 0; /* Increased margin */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Navigation links at the bottom */
+.navigation-links {
+    margin-top: 1.5rem; /* Increased margin */
+    text-align: center;
+    font-size: 1rem; /* Increased font size */
+}
+
+.navigation-links p {
+    margin-bottom: 0.8rem; /* Increased spacing */
+}
+
+.navigation-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem; /* Increased gap between buttons */
+}
+
+.navigation-links li {
+    margin-bottom: 0.8rem; /* Increased vertical spacing for wrapped items */
+}
+
+.navigation-links a {
+    display: inline-block;
+    /* Removed individual margin from here to let gap handle spacing */
+    padding: 0.6rem 1.2rem; /* Increased padding */
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Increased font size for navigation links */
+}
+
+.navigation-links a:hover {
+    background-color: #2980b9;
+}
+
+/* Message Styles */
+.message {
+    padding: 0.8rem; /* Increased padding */
+    border-radius: 4px;
+    margin-bottom: 1rem; /* Increased margin */
+    text-align: center;
+    font-size: 0.9rem; /* Increased font size */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

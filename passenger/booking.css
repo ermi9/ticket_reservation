@@ -1,0 +1,92 @@
+/* passenger_booking.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0; padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+    overflow-y: auto;
+}
+.main-content {
+    background-color: #fff;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 960px;
+    box-sizing: border-box;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    color: #3498db;
+}
+h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    color: #2c3e50;
+}
+p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.navigation-links {
+    margin-top: 2rem;
+}
+.navigation-links p {
+    margin: 0.4rem 0;
+}
+.navigation-links a {
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.navigation-links a:hover {
+    background-color: #5a6268;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+thead {
+    background-color: #3498db;
+    color: white;
+}
+thead th {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid #2980b9;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tbody td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover {
+    text-decoration: underline;
+}

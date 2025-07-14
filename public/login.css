@@ -1,0 +1,117 @@
+/* login.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.main-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #3498db;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    margin: 0.8rem 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    margin-bottom: 0.6rem;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.navigation-links {
+    margin-top: 0.8rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.navigation-links a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.navigation-links a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    padding: 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

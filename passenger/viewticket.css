@@ -1,0 +1,85 @@
+/* viewticket.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px; /* smaller than 900px */
+    margin: 2rem auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.message {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+.booking-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.booking-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.booking-info {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.booking-info strong {
+    color: #555;
+}
+
+.navigation-links {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.navigation-links a {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-links a:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,304 @@
+/*
+  manage_drivers.css
+
+  This CSS file provides styling for the manage_drivers.php page,
+  maintaining consistency with operator_index.css and assign_driver_cities.css.
+  It focuses on responsive table display and modal styling.
+*/
+
+/* General body styles - Consistent with operator_index.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Allow content to stack vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    font-size: 16px; /* Increased base font size */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Container for main content - Adjusted for wider table content */
+.container {
+    max-width: 1400px; /* Wider max-width for tables */
+    width: 95%; /* Take more width on larger screens */
+    margin: 20px auto; /* Center the content block with vertical margin */
+    padding: 2rem; /* Consistent padding */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Heading Styles - Consistent with operator_index.css */
+h1 {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Paragraph styles */
+p {
+    text-align: center;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+/* Table specific styles */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes double borders */
+    font-size: 0.95rem; /* Slightly smaller font for table content */
+    min-width: 700px; /* Ensures table is readable on small screens */
+}
+
+table thead th {
+    background-color: #f9f9f9;
+    color: #555;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+table tbody td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: top; /* Align content to the top of the cell */
+}
+
+table tbody tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+}
+
+table tbody tr:hover {
+    background-color: #f0f0f0; /* Subtle hover effect */
+}
+
+/* Actions column styling */
+table tbody td:last-child {
+    white-space: nowrap; /* Prevent actions from wrapping */
+}
+
+table tbody td a,
+table tbody td button {
+    display: inline-block;
+    padding: 0.4rem 0.8rem; /* Smaller padding for inline actions */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem; /* Smaller font for action buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 0.5rem; /* Space between action buttons */
+    border: none; /* Remove button default border */
+}
+
+table tbody td a {
+    background-color: #3498db; /* Blue for edit/assign */
+    color: white;
+}
+
+table tbody td a:hover {
+    background-color: #2980b9;
+}
+
+table tbody td button {
+    background-color: #e74c3c; /* Red for delete */
+    color: white;
+}
+
+table tbody td button:hover {
+    background-color: #c0392b;
+}
+
+/* General button styles - Consistent with operator_index.css */
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem; /* Increased padding for standalone buttons */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin: 1rem 0.5rem; /* Margin for standalone buttons */
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.button.secondary {
+    background-color: #6c757d;
+}
+
+.button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Message Styles - Consistent with operator_index.css */
+.message {
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Modal Styles for Delete Confirmation */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Smaller width for modal */
+    max-width: 400px; /* Max width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between modal buttons */
+}
+
+.modal-buttons button {
+    width: auto; /* Allow buttons to size based on content */
+    padding: 0.6rem 1.2rem; /* Smaller padding for modal buttons */
+    font-size: 0.9rem; /* Smaller font for modal buttons */
+    margin: 0; /* Override general button margin */
+}
+
+.modal-buttons .confirm {
+    background-color: #e74c3c; /* Red for confirm delete */
+}
+
+.modal-buttons .confirm:hover {
+    background-color: #c0392b;
+}
+
+.modal-buttons .cancel {
+    background-color: #6c757d; /* Gray for cancel */
+}
+
+.modal-buttons .cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Footer styles - Consistent with operator_index.css */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #6c757d;
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+    width: 100%; /* Ensure footer spans full width */
+    box-sizing: border-box;
+}
+
+/* Accessibility: Focus styles for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Hide elements visually but keep them accessible for screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
