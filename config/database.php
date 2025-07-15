@@ -1,7 +1,7 @@
 <?php
 // config/database.php
 
-// --- Database Connection Configuration ---
+
 // IMPORTANT: Adjust these credentials for your setup.
 $dbHost = 'localhost';
 $dbUser = 'root'; // Your MySQL username
